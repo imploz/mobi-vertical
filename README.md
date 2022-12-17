@@ -14,10 +14,40 @@ This fork was created from [the original](https://github.com/leotaku/mobi) to ad
 (in addition to support for **horizontal** RTL which seems to be in the code, though I haven't tested it and didn't modify it's behavior in this fork).
 This allows this library to generate japanese azw3 ebooks with the same text orientation as in typical Japanese printed novels to enjoy them on a Kindle reader.
 
+Also, I added `ExtraHead` field to `Book` to allow adding e.g. extra styles directly to the generated html files.
+
+### Usage
+
+In order to get vertical RTL text, use mobi.Book's `RightToLeft=true` and `Vertical=true`:
+
+```go
+  mb := mobi.Book{
+    // ...
+    RightToLeft: true,
+    Vertical:    true,
+  }
+```
+
+In order to get emphasis markers from [yomukaku](https://yomukaku.jp) work use the following for Book's  
+
+```go
+  mb := mobi.Book{
+    // ...
+    ExtraHead: `
+      <style> 
+        .emphasisDots {
+          font-weight: normal;
+          text-emphasis-style: dot;
+          -webkit-text-emphasis-style: dot;
+          }
+      </style>`
+  }
+```
+
 ### Possible improvements of this fork
 
-It would probably be cleaner to introduce the necessary styles as CSS files and refer to them in each html file using Book.CSSFlows instead of this dirty yet easy hack
-in `templating.go`.
+It would probably be cleaner to introduce the necessary styles as CSS files and refer to them in each html file using Book.CSSFlows instead of this dirty yet easy hack in `templating.go`.
+The same goes for injecting e.g. the style for `emphasisDots` class via `ExtraHead`.
 
 ## Known issues
 

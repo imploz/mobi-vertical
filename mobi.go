@@ -40,6 +40,7 @@ type Book struct {
 	CoverImage    image.Image
 	ThumbImage    image.Image
 	UniqueID      uint32
+	ExtraHead     string
 
 	// hidden
 	tpl *template.Template

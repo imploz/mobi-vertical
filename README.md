@@ -7,6 +7,18 @@
 This package implements facilities to create KF8-formatted MOBI and AZW3 books.
 We also export the raw PalmDB writer and various PalmDoc, MOBI and KF8 components as subpackages, which can be used to implement other formats that build on these standards.
 
+## This fork
+
+This fork was created from [the original](https://github.com/leotaku/mobi) to add support for **vertical** right-to-left text
+(and also vertical left-to-right text for completeness).
+(in addition to support for **horizontal** RTL which seems to be in the code, though I haven't tested it and didn't modify it's behavior in this fork).
+This allows this library to generate japanese azw3 ebooks with the same text orientation as in typical Japanese printed novels to enjoy them on a Kindle reader.
+
+### Possible improvements of this fork
+
+It would probably be cleaner to introduce the necessary styles as CSS files and refer to them in each html file using Book.CSSFlows instead of this dirty yet easy hack
+in `templating.go`.
+
 ## Known issues
 
 + Chapters are supported but subchapters are not

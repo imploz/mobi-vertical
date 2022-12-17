@@ -16,7 +16,7 @@ const defaultTemplateString = `<?xml version="1.0" encoding="UTF-8"?>
     <link rel="stylesheet" type="text/css" href="kindle:flow:{{ $i | inc | base32 }}?mime=text/css"/>
     {{- end }}
   </head>
-  <body aid="{{ .Chunk.ID | base32 }}">
+  <body aid="{{ .Chunk.ID | base32 }}" {{ if .Mobi.Vertical }}{{ if .Mobi.RightToLeft }} style="-webkit-writing-mode: vertical-rl; writing-mode: vertical-rl;"  {{ else }} style="-webkit-writing-mode: vertical-lr; writing-mode: vertical-lr;" {{ end }}{{ end }}>
   </body>
 </html>`
 

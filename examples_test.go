@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/leotaku/mobi"
+	"github.com/imploz/mobi-vertical"
 	"golang.org/x/text/language"
 )
 

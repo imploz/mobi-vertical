@@ -4,7 +4,7 @@ import (
 	"image"
 	"io"
 
-	"github.com/leotaku/mobi/jfif"
+	"github.com/imploz/mobi-vertical/jfif"
 )
 
 type ImageRecord struct {

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/leotaku/mobi/pdb"
+	"github.com/imploz/mobi-vertical/pdb"
 )
 
 func TestPDBHeaderLength(t *testing.T) {

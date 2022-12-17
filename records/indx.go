@@ -4,8 +4,8 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/leotaku/mobi/pdb"
-	t "github.com/leotaku/mobi/types"
+	"github.com/imploz/mobi-vertical/pdb"
+	t "github.com/imploz/mobi-vertical/types"
 )
 
 type IndexRecord struct {

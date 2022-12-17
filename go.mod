@@ -1,4 +1,4 @@
-module github.com/leotaku/mobi
+module github.com/imploz/mobi-vertical
 
 go 1.16
 
